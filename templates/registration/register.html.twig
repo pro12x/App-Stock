@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {{ form_start(registrationForm) }}
+    <div class="justify-content-center  align-items-center">
+        <div class="form-group">
+            <h4 class="text-center mb-4">Register</h4>
+        </div>
+        <div class="form-group mb-3">
+            {{ form_row(registrationForm.lastname, {"attr":{"class" : "form-control", "placeholder" : "Lastname"} }) }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form_row(registrationForm.firstname, {"attr":{"class" : "form-control", "placeholder" : "Firstname"} }) }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form_row(registrationForm.email, {"attr":{"class" : "form-control", "placeholder" : "Email"} }) }}
+        </div>
+        {# <div class="form-group mb-3">
+            {{ form_row(registrationForm.roles, {"attr":{"class" : "form-control", "placeholder" : "Password"} }) }}
+        </div> #}
+        <div class="form-group mb-3">
+            {{ form_row(registrationForm.password, {"attr":{"class" : "form-control", "placeholder" : "Password"} }) }}
+        </div>
+        <div class="form-group mb-3">
+            {{ form_row(registrationForm.plainPassword, {"attr":{"class" : "form-control", "placeholder" : "Password"} }) }}
+        </div>
+        {# <div class="form-group mb-3">
+            <label for="plain_password">Confirm password</label>
+            <input type="password" class="form-control" name="plain_password" id="plain_password" placeholder="Confirm password">
+        </div> #}
+        <div class="form-group mb-3">
+            {{ form_row(registrationForm.agreeTerms) }}
+            {# {{ form_row(registrationForm.role, {"attr":{"class" : "form-control", "placeholder" : "Firstname"} }) }} #}
+        </div>
+        <div class="form-group mb-3 row mx-auto">
+            <input type="submit" class="form-control btn btn-outline-primary col" value="Register">
+        </div>
+    </div>
+        {# {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Register</button> #}
+    {{ form_end(registrationForm) }}
+{% endblock %}
