@@ -8,17 +8,19 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
+                    <th scope="col">Label</th>
+                    <th scope="col">Stock</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {% for cat in category %}
+                {% for prod in product %}
                     <tr class="table-secondary">
-                        <td>{{ cat.id }}</td>
-                        <td>{{ cat.name }}</td>
+                        <td>{{ prod.id }}</td>
+                        <td>{{ prod.label }}</td>
+                        <td>{{ prod.stock }}</td>
                         <th>
-                            <a type="button" class="btn btn-outline-warning" href="/category/edit/{{cat.id}}">Update</a>
+                            <a type="button" class="btn btn-outline-warning" href="/category/edit/{{prod.id}}">Update</a>
                             <a type="button" class="btn btn-outline-danger" href="#">Delete</a>
                         </th>
                     </tr>
